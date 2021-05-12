@@ -1,11 +1,3 @@
-/* singular and plural replacements */
-
-/* .singular::after, .plural::after {
-    content: attr(data-gender);
-} */
-
-/* Defaults */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
 *, *:before, *:after {
