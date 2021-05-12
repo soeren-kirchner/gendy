@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="gendy.js"></script>
+    <link rel="stylesheet" href="gendy.css">
+    <title>Gendy Demo</title>
+</head>
+<body>
+    <div class="gendy">
+        <div class="gbutton" onclick="showVariantsList()">G</div>
+        <ul id="glist" class="glist-off">
+            <li onclick="setVariant(':')">:innen</li>
+            <li onclick="setVariant('_')">_innen</li>
+            <li onclick="setVariant('/')">/innen</li>
+            <li onclick="setVariant('*')">*innen</li>
+            <li onclick="setVariant('y')">y & ys 💕</li>
+        </ul>
+    </div>
+    <main>
+        <article>
+            <p><span class="g">Lehrer|in|Lehry</span></p>
+            <p><span class="g">Der|Die|Das</span></p>
+            <p><span class="g">Wirte||Wirtys</span></p>
+            <p><span class="g">Kolleg|innen|ys</span></p>
+        </article>
+    </main>
+</body>
+</html>
