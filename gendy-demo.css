@@ -1,11 +1,3 @@
-/* singular and plural replacements */
-
-/* .singular::after, .plural::after {
-    content: attr(data-gender);
-} */
-
-/* Defaults */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
 *, *:before, *:after {
@@ -30,12 +22,12 @@ main {
 
 /* G and list */
 
-.gendy {
+.gendy-dropdown {
     font-size: 16px;
     color: var(--default-color);
 }
 
-.gendy .gbutton {
+.gendy-dropdown .gendy-button {
     background-color: var(--default-bg-color);
     position: fixed;
     font-weight: 300;
@@ -51,7 +43,7 @@ main {
     border-radius: 1em .2em .2em 1em;
 }
 
-.gendy ul {
+.gendy-dropdown ul {
     position: fixed;
     top: 5em;
     right: .5em;
@@ -64,13 +56,13 @@ main {
     border-radius: 1em .2em 1em 1em;
 }
 
-.glist-on {
+.gendy-list-on {
     visibility: visible;
     transform-origin: top;
     animation: grow 200ms ease-in-out;
 }
 
-.glist-off {
+.gendy-list-off {
     visibility: hidden;
 }
 
@@ -83,6 +75,6 @@ main {
     }
 }
 
-.gendy ul li {
+.gendy-dropdown ul li {
     margin: .5em;
 }

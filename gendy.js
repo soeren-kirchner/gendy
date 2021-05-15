@@ -1,10 +1,7 @@
-// set default value on page loaded
-window.addEventListener('load', (event) => {
-    initElements(':')
-});
+const GENDY_SELECTOR = '.gendy span:not([class]), .g'; 
 
 function initElements(defaultVariant) {
-    onElements('.g', element => {
+    onElements(GENDY_SELECTOR, element => {
         [element.dataset.first, element.dataset.second, element.dataset.third=''] = element.textContent.split('|')
         element.dataset.y = ['y', 'ys'].includes(element.dataset.third) ? element.dataset.first + element.dataset.third : element.dataset.third 
     })
@@ -17,20 +14,13 @@ function getTextContent(element, variant) {
 } 
 
 function setVariant(variant) {
-    onElements('.g', element => {
+    onElements(GENDY_SELECTOR, element => {
         element.textContent = getTextContent(element, variant)
     });
-    showVariantsList(false)
 }
 
 function onElements(classnames, closure) {
     for(element of document.querySelectorAll(classnames)) {
         closure(element)
     }
-}
-
-function showVariantsList(show = true) {
-    var list = document.getElementById('glist')
-    list.classList.remove(show ? 'glist-off' : 'glist-on')
-    list.classList.add(show ? 'glist-on' : 'glist-off')
 }
