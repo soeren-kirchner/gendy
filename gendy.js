@@ -1,7 +1,7 @@
-const GENDY_SELECTOR = '.gendy span:not([class]), .g'; 
+const GENDY_QUERY = '.gendy span:not([class]), .g'; 
 
 function initElements(defaultVariant) {
-    onElements(GENDY_SELECTOR, element => {
+    onElements(GENDY_QUERY, element => {
         [element.dataset.first, element.dataset.second, element.dataset.third=''] = element.textContent.split('|')
         element.dataset.y = ['y', 'ys'].includes(element.dataset.third) ? element.dataset.first + element.dataset.third : element.dataset.third 
     })
@@ -14,7 +14,7 @@ function getTextContent(element, variant) {
 } 
 
 function setVariant(variant) {
-    onElements(GENDY_SELECTOR, element => {
+    onElements(GENDY_QUERY, element => {
         element.textContent = getTextContent(element, variant)
     });
 }
