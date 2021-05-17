@@ -11,7 +11,7 @@
 
 <script>
     window.addEventListener('load', (event) => {
-        initElements(':')
+        gendyInit(':')
     });
 
     function showVariantsList(show = true) {
@@ -21,7 +21,7 @@
     }
 
     function selectVariant(variant) {
-        setVariant(variant)
+        gendySetVariant(variant)
         showVariantsList(false)
     }
 </script>

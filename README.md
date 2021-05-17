@@ -1,7 +1,8 @@
-The following text will be in German, because the Subject of Gendy is the German language.
+The following text will be in German, because the subject of Gendy is the German language.
 # gendy
-Gendy ist ein einfaches Skript, das es Webseitenbetreibern ermöglicht, ihren Lesern die Art des Genderns oder Entgendern nach Phettberg/Kronschläger selbst zu wählen.
+Gendy ist ein Skript für Webseitenbetreiber, die ihren Lesern die Art des Genderns oder Entgendern nach Phettberg/Kronschläger selbst wählen lassen möchten.
 
+![Gendy Live Example](gendy-live-example.gif "Logo Title Text 1")
 # Idee
 
 
