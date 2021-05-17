@@ -2,11 +2,43 @@ The following text will be in German, because the subject of Gendy is the German
 # gendy
 Gendy ist ein Skript für Webseitenbetreiber, die ihren Lesern die Art des Genderns oder Entgendern nach Phettberg/Kronschläger selbst wählen lassen möchten.
 
-![Gendy Live Example](gendy-live-example.gif "Logo Title Text 1")
-# Idee
+![Gendy Live Example](gendy-live-example.gif)
 
+**Gendy in reale Publikation eingebunden.**
 
 # Einbindung
+Das Skript wird über 
+```html
+<script src="gendy.js"></script>
+```
+in die eigene Seite eingebunden und über die Javascript-Funktion
+```js
+gendyInit(':')
+```
+initialisiert. 
+
+Es kann mit jedem anderem Trennzeichen oder mit 'y' initialisiert werden. Dadurch werden alle für das Gendern markierte Wörter vorbereitet und mit dem Trennzeichen versehen. In dem Beispiel werden alle markierten Wörter mit : gegendert.
+
+Es empfiehlt sich, dass direkt nach dem Laden der Seite zu erledigen.
+```html
+<script>
+    window.addEventListener('load', (event) => {
+        gendyInit(':')
+    });
+</script>
+```
+
+Nachdem die Wörter initialisiert sind kann die aktuelle Variante über
+```js
+gendySetVariant('<Trennzeichen>')
+```
+geändert werden.
+
+Im Prinzip kann jedes Trennzeichen verwendet werden. Setzt man das Trennzeichen auf 'y', dann werden die Wörter nach Phettberg entgendert (y-Variante)
+
+Dieses Repository beinhaltet ein Demo, dass die Einbindung und Verwendung demonstriert. 
+
+>gendy-demo.html
 
 # Nutzung
 
