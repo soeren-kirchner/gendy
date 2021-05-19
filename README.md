@@ -4,7 +4,9 @@ Gendy ist ein Skript für Webseitenbetreiber, die ihren Lesern die Art des Gende
 
 ![Gendy Live Example](gendy-live-example.gif)
 
-**Gendy in reale Publikation eingebunden.**
+**gendy in reale Publikation eingebunden.**
+
+Online Beispiel: [unerzogen Magazin: "Andere Länder – andere Sitten, Andere Gesetze – andere Bildung"](https://www.unerzogen-magazin.de/artikel/?articleID=849)
 
 # Einbindung
 Das Skript wird über 
@@ -17,7 +19,7 @@ gendyInit(':')
 ```
 initialisiert. 
 
-Es kann mit jedem anderem Trennzeichen oder mit 'y' initialisiert werden. Dadurch werden alle für das Gendern markierte Wörter vorbereitet und mit dem Trennzeichen versehen. In dem Beispiel werden alle markierten Wörter mit : gegendert.
+Es kann mit jedem anderem Trennzeichen oder mit 'y' initialisiert werden. Dadurch werden alle für das Gendern markierte Wörter vorbereitet und mit dem Trennzeichen versehen. In dem Beispiel werden alle markierten Wörter mit ':' gegendert.
 
 Es empfiehlt sich, dass direkt nach dem Laden der Seite zu erledigen.
 ```html
@@ -50,18 +52,18 @@ Die einfachste Methode ist ein Wrapper mit der Klasse gendy. Alle klassenlosen `
 </article>
 ```
 
-Alternativ, wenn man keinen Wrapper verwenden möchte/kann, dann kann man dem `span` auch direkt die Klasse `g` zuweisen
+Alternativ, wenn man keinen Wrapper verwenden möchte/kann, dann kann man dem `span` auch direkt die Klasse `g` zuweisen.
 ```html
 <p>Wir fragen die <span class="g">Lehrer|innen|Lehrys</span> nach dem Sinn.</p>
 ```
 
-# Der Aufbau 
+# Aufbau 
 Der allgemeine Aufbau ist:
 
 ```html
 <span>Basis|Anhang|y-Alternative</span>
 ```
-Wird gegendert mit **\*,:,_** oder **/** werden Basis und Anhang mit dem entsprechendem Trennzeichen zusammengesetzt.
+Wird gegendert mit '**\***', '**:**', '**_**' oder '**/**' werden Basis und Anhang mit dem entsprechendem Trennzeichen zusammengesetzt. Prinzipiell kann auch jedes andere Zeichen als Trennzeichen genutzt werden.
 
 Wird Entgendern nach Phettberg gewählt (y-Variante) wir die y-Alternative verwendet.
 
@@ -91,7 +93,7 @@ Lässt sich das Wort in der y-Variante aus der Basis und der Endung y/ys zusamme
 ``` 
 wird zu Kolleg:in (Kollegy)
 ```html
-<span>Polizist|innen|ys</span>.</p>
+<span>Polizist|innen|ys</span>.
 ``` 
 wird zu Polizist:innen (Polizistys)
 
@@ -102,7 +104,7 @@ Möchte man ein Wort (aus welchem Grund auch immer) nicht zum gendern anbieten, 
 ```
 wird zu: Kims Vater ist Polizist (Kims Vater ist Polizisty) 
 
-# weitere Beispiele
+# Weitere Beispiele
 ```html
 <span>Der|Die|Das</span> <span>Schüler|in|Schüly</span>
 ```
