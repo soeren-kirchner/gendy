@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="gendy.js"></script>
+    <link rel="stylesheet" href="gendy-demo.css">
+    <title>Gendy Demo</title>
+</head>
+
+<script>
+    window.addEventListener('load', (event) => {
+        gendyInit(':')
+    });
+
+    function showVariantsList(show = true) {
+        var list = document.getElementById('gendy-list')
+        list.classList.remove(show ? 'gendy-list-off' : 'gendy-list-on')
+        list.classList.add(show ? 'gendy-list-on' : 'gendy-list-off')
+    }
+
+    function selectVariant(variant) {
+        gendySetVariant(variant)
+        showVariantsList(false)
+    }
+</script>
+
+<body>
+    <div class="gendy-dropdown">
+        <div class="gendy-button" onclick="showVariantsList()">G</div>
+        <ul id="gendy-list" class="gendy-list-off">
+            <li onclick="selectVariant(':')">:innen</li>
+            <li onclick="selectVariant('*')">*innen</li>
+            <li onclick="selectVariant('_')">_innen</li>
+            <li onclick="selectVariant('/')">/innen</li>
+            <li onclick="selectVariant('y')">y & ys 💕</li>
+        </ul>
+    </div>
+    <main>
+        <article class="gendy">
+            <p><span>Schüler|in|Schüly</span></p>
+            <p><span>Bäcker|innen|Bäckys</span></p>
+            <p><span>Kolleg|in|y</span></p>
+            <p><span>Der|Die|Das</span> <span>Schüler|in|Schüly</span> fragt <span>den|die|das</span> <span>Lehrer|in|Lehry</span>.</p>
+            <p>Die <span>Schüler|innen|Schülys</span> fragen sich, was sich die <span>Lehrer|innen|Lehrys</span> wieder mal dabei gedacht haben.</p>
+            <p><span>Ein|e|Ein</span> <span>Editor|in|Edity</span> benutzt einen Editor</p>
+            <p>Lob ist eine Erinnerung daran, dass <span>der|die|das</span> <span>Lobende||Lobendy</span> Macht über sie hat.</p>
+            <p>Tatsächlich ist <span>der|die|das</span> <span>Belohnende||Belohnendy</span> wie <span>ein|e|ein</span> <span>Gutachter|in|Gutachty</span>, <span>der|die|das</span> beurteilt, was ein Lob verdient und was nicht.</p>
+            <h3>Nur ungendert:</h3> 
+            <p>Kims Vater ist <span>Polizist||y</span>.</p>
+            <p>Achmed der <span>Editor||Edity</span> benutzt einen Editor.</p>
+        </article>
+    </main>
+</body>
+</html>
