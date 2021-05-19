@@ -1,6 +1,6 @@
 The following text will be in German, because the subject of Gendy is the German language.
 # gendy
-ist ein Skript für Webseitenbetreiber, die ihren Lesern die Art des Genderns oder Entgendern nach Phettberg/Kronschläger selbst wählen lassen möchten.
+ist ein Skript für Webseitenbetreiber:innen, die ihren Leser:innen die Art des Genderns oder Entgendern nach Phettberg/Kronschläger selbst wählen lassen möchten.
 
 ![Gendy Live Example](gendy-live-example.gif)
 
@@ -30,13 +30,13 @@ Es empfiehlt sich, dass direkt nach dem Laden der Seite zu erledigen.
 </script>
 ```
 
-Nachdem die Wörter initialisiert sind kann die aktuelle Variante über
+Nachdem die Wörter initialisiert sind, kann die aktuelle Variante über
 ```js
 gendySetVariant('<Trennzeichen>')
 ```
 geändert werden.
 
-Im Prinzip kann jedes Trennzeichen verwendet werden. Setzt man das Trennzeichen auf 'y', dann werden die Wörter nach Phettberg entgendert (y-Variante)
+Im Prinzip kann jedes Trennzeichen verwendet werden. Setzt man das Trennzeichen auf 'y', dann werden die Wörter nach Phettberg entgendert (y-Variante).
 
 Dieses Repository beinhaltet ein Demo, dass die Einbindung und Verwendung demonstriert. 
 
@@ -98,7 +98,7 @@ wird zu Kolleg:in (Kollegy)
 wird zu Polizist:innen (Polizistys)
 
 
-Möchte man ein Wort (aus welchem Grund auch immer) nicht zum gendern anbieten, aber zum entgendern, lässt man den Anhang einfach weg. Das Trennzeichen wird dann nicht mit ausgegeben.
+Möchte man ein Wort (aus welchem Grund auch immer) nicht zum Gendern anbieten, aber zum Entgendern, lässt man den Anhang einfach weg. Das Trennzeichen wird dann nicht mit ausgegeben.
 ```html
 <p>Kims Vater ist <span>Polizist||y</span>.</p>
 ```
