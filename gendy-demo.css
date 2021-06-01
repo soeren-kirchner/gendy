@@ -25,6 +25,7 @@ main {
 .gendy-dropdown {
     font-size: 16px;
     color: var(--default-color);
+    cursor: pointer
 }
 
 .gendy-dropdown .gendy-button {
